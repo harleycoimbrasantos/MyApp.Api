@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Importar Arquivo CNAB</title>
+</head>
+<body>
+    <h1>Formulário de Upload de Arquivos</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="arquivo" id="fileInput">
+        <button type="button" onclick="uploadFile()">Enviar</button>
+    </form>
+
+    <script>
+		const toBase64 = file => new Promise((resolve, reject) => {
+			const reader = new FileReader();
+			reader.readAsDataURL(file);
+			reader.onload = () => resolve(reader.result);
+			reader.onerror = reject;
+		});
+
+		function BodyJson(value)
+		{
+			 this.Base64 = value;
+        }
+
+        function uploadFile() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert('Selecione um arquivo para enviar.');
+                return;
+            }
+
+            (async () => {
+                const strBase64 = await toBase64(file);
+
+                var objJsonPost = new BodyJson(strBase64);
+                const apiUrl = 'https://localhost:7135/Arquivo/processar-arquivo';
+
+                const response = fetch(apiUrl, {
+                    method: "POST", 
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ "Base64": strBase64 })
+                })
+            })();
+        }
+    </script>
+</body>
+</html>
