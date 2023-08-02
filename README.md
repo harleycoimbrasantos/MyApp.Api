@@ -16,5 +16,9 @@ JavaScript puro
 
 # Observações
 
-Procurei entregar uma solução mais completa na parte de back-end utilizando um template em "DDD".
+Procurei entregar uma solução mais completa na parte de back-end utilizando um template em "DDD"
+
+- O Formulário de front está em MyApp.Api/Files/Front.html
+
+
 
