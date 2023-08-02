@@ -4,10 +4,10 @@
 
 Utilizando:
 
-SQL SERVER
-Entity Framework
-Migrations
-Mediator
+- SQL SERVER
+- Entity Framework
+- Migrations
+- Mediator
 
 2. Implementado uma solução em html  basica para o front-end
 Utilizando:
