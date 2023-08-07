@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.6.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.9">
       <PrivateAssets>all</PrivateAssets>
@@ -27,6 +28,10 @@
     <ProjectReference Include="..\MyApp.Application\MyApp.Application.csproj" />
     <ProjectReference Include="..\MyApp.CrossCutting\MyApp.CrossCutting.csproj" />
     <ProjectReference Include="..\MyApp.Infrastructure\MyApp.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="logs\" />
   </ItemGroup>
 
 </Project>

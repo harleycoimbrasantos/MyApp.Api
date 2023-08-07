@@ -6,15 +6,18 @@ namespace MyApp.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ArquivoController : Controller
+    public class ArquivoController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private Serilog.ILogger _logger;
 
         public ArquivoController(
-            IMediator mediator
+            IMediator mediator, 
+            Serilog.ILogger logger 
         )
         {
             _mediator = mediator;
+            _logger = logger;
         }
 
         [HttpPost("processar-arquivo")]
@@ -29,6 +32,7 @@ namespace MyApp.Api.Controllers
         [HttpGet("check")]
         public  string GetHelthCheck(CancellationToken cancellationToken)
         {
+            _logger.Information("TESTE LOG");
             return "OK";
         }
     }
