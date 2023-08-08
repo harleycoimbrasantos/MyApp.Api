@@ -8,12 +8,10 @@ namespace MyApp.CrossCutting.PipelineBehavior
         IPipelineBehavior<TRequest, TResponse>
         where TRequest : notnull
     {
-        private readonly IEnumerable<IValidator> _validators;
         private IServiceProvider ServiceProvider { get; }
 
-        public ValidationPipelineBehavior(IEnumerable<IValidator> validators, IServiceProvider serviceProvider)
+        public ValidationPipelineBehavior(IServiceProvider serviceProvider)
         {
-            _validators = validators;
             ServiceProvider = serviceProvider;
         }
 
@@ -21,11 +19,28 @@ namespace MyApp.CrossCutting.PipelineBehavior
         {
             var context = new ValidationContext<TRequest>(request);
 
-            var validationResults = await Task.WhenAll(_validators.Select(v => v.ValidateAsync(context, cancellationToken)));
+            var validator = ServiceProvider
+                .GetService<IValidator<TRequest>>();
 
-            var failures = validationResults.SelectMany(r => r.Errors).Where(f => f != null).ToList();
+            var failures = (
+                validator != default ?
+                    await validator.ValidateAsync(request, cancellationToken) :
+                    default
+                )
+                ?.Errors;
 
-            if (failures?.Count != 0)
+            var errorsDictionary = failures?.Where(x => x != null)
+                .GroupBy(
+                        x => x.PropertyName,
+                        x => x.ErrorMessage,
+                        (propertyName, errorMessages) => new
+                        {
+                            Key = propertyName,
+                            Values = errorMessages.Distinct().ToArray()
+                        })
+                .ToDictionary(x => x.Key, x => x.Values);
+
+            if (errorsDictionary?.Count>0)
                 throw new ValidationException(failures);
 
             return await next();

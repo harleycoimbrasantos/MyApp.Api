@@ -1,6 +1,5 @@
 ﻿using MediatR;
 
-
 namespace MyApp.Application.CNAB
 {
     public class Request : IRequest<Response>
