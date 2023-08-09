@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using MyApp.Data.Context;
 using MyApp.Data.Interface;
 using MyApp.Domain.Entities;
 using MyApp.Services.Interfaces;

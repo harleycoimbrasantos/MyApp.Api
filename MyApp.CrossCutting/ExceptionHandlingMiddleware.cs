@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.IdentityModel.SecurityTokenService;
+﻿using Microsoft.IdentityModel.SecurityTokenService;
 using Serilog;
 using System.Text.Json;
 using FluentValidation;
+using Microsoft.AspNetCore.Http;
 
 namespace MyApp.CrossCutting
 {
@@ -39,7 +39,6 @@ namespace MyApp.CrossCutting
             };
 
             httpContext.Response.ContentType = "application/json";
-
             httpContext.Response.StatusCode = statusCode;
 
             await httpContext.Response.WriteAsync(JsonSerializer.Serialize(response));
@@ -49,15 +48,14 @@ namespace MyApp.CrossCutting
             exception switch
             {
                 BadRequestException => StatusCodes.Status400BadRequest,
-     //           NotFoundException => StatusCodes.Status404NotFound,
-      //          ValidationException => StatusCodes.Status422UnprocessableEnttity,
+                ValidationException => StatusCodes.Status422UnprocessableEntity,
                 _ => StatusCodes.Status500InternalServerError
             };
 
         private static string GetTitle(Exception exception) =>
             exception switch
             {
-                ApplicationException applicationException => "TESTE HARLEY",
+                ValidationException => "Validation Exception",
                 _ => "Server Error"
             };
 

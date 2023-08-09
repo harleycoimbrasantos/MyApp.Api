@@ -8,7 +8,7 @@ namespace MyApp.Application.CNAB
         {
             RuleFor(r => r)
                .Must(x => !string.IsNullOrWhiteSpace(x.Base64))
-               .WithName("Arquivo Obrigatorio")
+               .WithName("Base64")
                .WithMessage("Obrigatório");
         }
     }
