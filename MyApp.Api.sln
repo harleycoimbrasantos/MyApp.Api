@@ -20,7 +20,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyApp.Data", "MyApp.Infrast
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyApp.Test", "MyApp.Test\MyApp.Test.csproj", "{301C1A11-4972-4BAE-A9AB-D9CA26DDA207}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyApp.Services", "MyApp.Services\MyApp.Services.csproj", "{F9CA52B5-F9EC-4259-BE62-54022627C214}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyApp.Services", "MyApp.Services\MyApp.Services.csproj", "{F9CA52B5-F9EC-4259-BE62-54022627C214}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyApp.ReportService", "MyApp.ReportService\MyApp.ReportService.csproj", "{653FC837-B4C9-4364-B36E-496F786FFE58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +58,10 @@ Global
 		{F9CA52B5-F9EC-4259-BE62-54022627C214}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9CA52B5-F9EC-4259-BE62-54022627C214}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9CA52B5-F9EC-4259-BE62-54022627C214}.Release|Any CPU.Build.0 = Release|Any CPU
+		{653FC837-B4C9-4364-B36E-496F786FFE58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{653FC837-B4C9-4364-B36E-496F786FFE58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{653FC837-B4C9-4364-B36E-496F786FFE58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{653FC837-B4C9-4364-B36E-496F786FFE58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

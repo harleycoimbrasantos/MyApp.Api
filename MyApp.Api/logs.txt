@@ -597,3 +597,657 @@ System.InvalidOperationException: No service for type 'MediatR.IRequestHandler`2
 2023-08-09 10:16:09.119 -03:00 [INF] Route matched with {action = "ProcessarArquivo", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[MyApp.Application.CNAB.Response] ProcessarArquivo(MyApp.Application.CNAB.Request, System.Threading.CancellationToken) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
 2023-08-09 10:16:27.825 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api) in 18693.8991ms
 2023-08-09 10:16:27.834 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 11:56:59.604 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 11:56:59.637 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 11:56:59.645 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 11:56:59.649 -03:00 [INF] Hosting environment: Development
+2023-08-11 11:56:59.651 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 11:57:00.943 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 11:57:02.100 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 11:57:02.100 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 11:57:02.127 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 24.2320ms
+2023-08-11 11:57:02.128 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 1194.2809ms
+2023-08-11 11:57:02.171 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 70.2653ms
+2023-08-11 11:57:02.347 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 11:57:02.601 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 254.3283ms
+2023-08-11 11:57:11.105 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7135/Arquivo/processar-arquivo application/json 18
+2023-08-11 11:57:11.122 -03:00 [INF] CORS policy execution successful.
+2023-08-11 11:57:11.142 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 11:57:11.204 -03:00 [INF] Route matched with {action = "ProcessarArquivo", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[MyApp.Application.CNAB.Response] ProcessarArquivo(MyApp.Application.CNAB.Request, System.Threading.CancellationToken) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 11:57:11.498 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api) in 283.2313ms
+2023-08-11 11:57:11.508 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 11:57:11.537 -03:00 [ERR] Validation failed: 
+ -- Base64: Obrigatório Severity: Error
+FluentValidation.ValidationException: Validation failed: 
+ -- Base64: Obrigatório Severity: Error
+   at MyApp.CrossCutting.PipelineBehavior.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.CrossCutting\PipelineBehavior\ValidationPipelineBehavior.cs:line 44
+   at MyApp.Api.Controllers.ArquivoController.ProcessarArquivo(Request request, CancellationToken cancellationToken) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\Controllers\ArquivoController.cs:line 29
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at MyApp.CrossCutting.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.CrossCutting\ExceptionHandlingMiddleware.cs:line 19
+2023-08-11 11:57:11.742 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7135/Arquivo/processar-arquivo application/json 18 - 422 - application/json 637.1645ms
+2023-08-11 11:57:23.783 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7135/Arquivo/processar-arquivo application/json 21
+2023-08-11 11:57:23.787 -03:00 [INF] CORS policy execution successful.
+2023-08-11 11:57:23.790 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 11:57:23.798 -03:00 [INF] Route matched with {action = "ProcessarArquivo", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[MyApp.Application.CNAB.Response] ProcessarArquivo(MyApp.Application.CNAB.Request, System.Threading.CancellationToken) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 11:57:23.888 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api) in 82.7757ms
+2023-08-11 11:57:23.892 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 11:57:23.920 -03:00 [ERR] No service for type 'MediatR.IRequestHandler`2[MyApp.Application.CNAB.Request,MyApp.Application.CNAB.Response]' has been registered.
+System.InvalidOperationException: No service for type 'MediatR.IRequestHandler`2[MyApp.Application.CNAB.Request,MyApp.Application.CNAB.Response]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at MyApp.CrossCutting.PipelineBehavior.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.CrossCutting\PipelineBehavior\ValidationPipelineBehavior.cs:line 46
+   at MyApp.Api.Controllers.ArquivoController.ProcessarArquivo(Request request, CancellationToken cancellationToken) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\Controllers\ArquivoController.cs:line 29
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at MyApp.CrossCutting.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.CrossCutting\ExceptionHandlingMiddleware.cs:line 19
+2023-08-11 11:57:23.959 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7135/Arquivo/processar-arquivo application/json 21 - 500 - application/json 176.7865ms
+2023-08-11 11:58:21.309 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7135/Arquivo/processar-arquivo application/json 21
+2023-08-11 11:58:21.313 -03:00 [INF] CORS policy execution successful.
+2023-08-11 11:58:21.317 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 11:58:21.318 -03:00 [INF] Route matched with {action = "ProcessarArquivo", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[MyApp.Application.CNAB.Response] ProcessarArquivo(MyApp.Application.CNAB.Request, System.Threading.CancellationToken) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 11:58:33.505 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api) in 12180.9958ms
+2023-08-11 11:58:33.511 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 12:00:02.727 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 12:00:02.762 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 12:00:02.771 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 12:00:02.773 -03:00 [INF] Hosting environment: Development
+2023-08-11 12:00:02.774 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 12:00:03.546 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 12:00:04.086 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 12:00:04.086 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 12:00:04.110 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 19.3279ms
+2023-08-11 12:00:04.112 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 572.6892ms
+2023-08-11 12:00:04.142 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 56.6301ms
+2023-08-11 12:00:04.355 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 12:00:04.534 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 178.4824ms
+2023-08-11 12:00:11.823 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7135/Arquivo/processar-arquivo application/json 22
+2023-08-11 12:00:11.839 -03:00 [INF] CORS policy execution successful.
+2023-08-11 12:00:11.857 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 12:00:11.921 -03:00 [INF] Route matched with {action = "ProcessarArquivo", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[MyApp.Application.CNAB.Response] ProcessarArquivo(MyApp.Application.CNAB.Request, System.Threading.CancellationToken) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 12:00:17.765 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api) in 5834.5955ms
+2023-08-11 12:00:17.774 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 12:00:17.798 -03:00 [ERR] No service for type 'MediatR.IRequestHandler`2[MyApp.Application.CNAB.Request,MyApp.Application.CNAB.Response]' has been registered.
+System.InvalidOperationException: No service for type 'MediatR.IRequestHandler`2[MyApp.Application.CNAB.Request,MyApp.Application.CNAB.Response]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at MyApp.CrossCutting.PipelineBehavior.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.CrossCutting\PipelineBehavior\ValidationPipelineBehavior.cs:line 46
+   at MyApp.Api.Controllers.ArquivoController.ProcessarArquivo(Request request, CancellationToken cancellationToken) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\Controllers\ArquivoController.cs:line 29
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at MyApp.CrossCutting.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.CrossCutting\ExceptionHandlingMiddleware.cs:line 19
+2023-08-11 12:00:17.892 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7135/Arquivo/processar-arquivo application/json 22 - 500 - application/json 6069.2824ms
+2023-08-11 12:00:34.624 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7135/Arquivo/processar-arquivo application/json 22
+2023-08-11 12:00:34.630 -03:00 [INF] CORS policy execution successful.
+2023-08-11 12:00:34.634 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 12:00:34.637 -03:00 [INF] Route matched with {action = "ProcessarArquivo", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[MyApp.Application.CNAB.Response] ProcessarArquivo(MyApp.Application.CNAB.Request, System.Threading.CancellationToken) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 12:00:38.501 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api) in 3856.0559ms
+2023-08-11 12:00:38.508 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 12:02:05.916 -03:00 [ERR] No service for type 'MediatR.IRequestHandler`2[MyApp.Application.CNAB.Request,MyApp.Application.CNAB.Response]' has been registered.
+System.InvalidOperationException: No service for type 'MediatR.IRequestHandler`2[MyApp.Application.CNAB.Request,MyApp.Application.CNAB.Response]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at MyApp.CrossCutting.PipelineBehavior.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.CrossCutting\PipelineBehavior\ValidationPipelineBehavior.cs:line 46
+   at MyApp.Api.Controllers.ArquivoController.ProcessarArquivo(Request request, CancellationToken cancellationToken) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\Controllers\ArquivoController.cs:line 29
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at MyApp.CrossCutting.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.CrossCutting\ExceptionHandlingMiddleware.cs:line 19
+2023-08-11 12:02:05.962 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7135/Arquivo/processar-arquivo application/json 22 - 500 - application/json 91338.1227ms
+2023-08-11 12:02:07.611 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7135/Arquivo/processar-arquivo application/json 22
+2023-08-11 12:02:07.613 -03:00 [INF] CORS policy execution successful.
+2023-08-11 12:02:07.616 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 12:02:07.623 -03:00 [INF] Route matched with {action = "ProcessarArquivo", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[MyApp.Application.CNAB.Response] ProcessarArquivo(MyApp.Application.CNAB.Request, System.Threading.CancellationToken) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 12:02:09.701 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api) in 2066.4643ms
+2023-08-11 12:02:09.708 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 12:05:20.306 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 12:05:20.352 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 12:05:20.363 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 12:05:20.365 -03:00 [INF] Hosting environment: Development
+2023-08-11 12:05:20.367 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 12:05:20.942 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 12:05:21.487 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 12:05:21.487 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 12:05:21.504 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 15.9443ms
+2023-08-11 12:05:21.507 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 575.3373ms
+2023-08-11 12:05:21.527 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 39.5862ms
+2023-08-11 12:05:21.645 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 12:05:21.821 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 176.1175ms
+2023-08-11 12:05:28.087 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7135/Arquivo/processar-arquivo application/json 24
+2023-08-11 12:05:28.104 -03:00 [INF] CORS policy execution successful.
+2023-08-11 12:05:28.119 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 12:05:28.179 -03:00 [INF] Route matched with {action = "ProcessarArquivo", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[MyApp.Application.CNAB.Response] ProcessarArquivo(MyApp.Application.CNAB.Request, System.Threading.CancellationToken) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 12:05:31.120 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api) in 2928.4333ms
+2023-08-11 12:05:31.136 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 12:05:34.958 -03:00 [ERR] No service for type 'MediatR.IRequestHandler`2[MyApp.Application.CNAB.Request,MyApp.Application.CNAB.Response]' has been registered.
+System.InvalidOperationException: No service for type 'MediatR.IRequestHandler`2[MyApp.Application.CNAB.Request,MyApp.Application.CNAB.Response]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at MyApp.CrossCutting.PipelineBehavior.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.CrossCutting\PipelineBehavior\ValidationPipelineBehavior.cs:line 46
+   at MyApp.Api.Controllers.ArquivoController.ProcessarArquivo(Request request, CancellationToken cancellationToken) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\Controllers\ArquivoController.cs:line 29
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at MyApp.CrossCutting.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.CrossCutting\ExceptionHandlingMiddleware.cs:line 19
+2023-08-11 12:05:35.071 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7135/Arquivo/processar-arquivo application/json 24 - 500 - application/json 6984.8913ms
+2023-08-11 12:11:00.457 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 12:11:00.493 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 12:11:00.521 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 12:11:00.536 -03:00 [INF] Hosting environment: Development
+2023-08-11 12:11:00.537 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 12:11:01.043 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 12:11:01.585 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 12:11:01.585 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 12:11:01.606 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 19.0612ms
+2023-08-11 12:11:01.607 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 571.7890ms
+2023-08-11 12:11:01.623 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 38.6759ms
+2023-08-11 12:11:01.715 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 12:11:01.892 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 176.9198ms
+2023-08-11 12:11:06.802 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7135/Arquivo/processar-arquivo application/json 24
+2023-08-11 12:11:06.815 -03:00 [INF] CORS policy execution successful.
+2023-08-11 12:11:06.831 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 12:11:06.888 -03:00 [INF] Route matched with {action = "ProcessarArquivo", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[MyApp.Application.CNAB.Response] ProcessarArquivo(MyApp.Application.CNAB.Request, System.Threading.CancellationToken) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 12:11:16.116 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api) in 9215.8435ms
+2023-08-11 12:11:16.132 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 12:13:53.866 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 12:13:53.911 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 12:13:53.920 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 12:13:53.922 -03:00 [INF] Hosting environment: Development
+2023-08-11 12:13:53.924 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 12:13:54.626 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 12:13:55.198 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 12:13:55.198 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 12:13:55.214 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 13.9510ms
+2023-08-11 12:13:55.215 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 599.3617ms
+2023-08-11 12:13:55.234 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 36.6704ms
+2023-08-11 12:13:55.367 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 12:13:55.549 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 182.8272ms
+2023-08-11 13:59:38.733 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 13:59:38.767 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 13:59:38.775 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 13:59:38.777 -03:00 [INF] Hosting environment: Development
+2023-08-11 13:59:38.779 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 13:59:39.657 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 13:59:40.264 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 13:59:40.264 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 13:59:40.286 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 18.9285ms
+2023-08-11 13:59:40.286 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 638.6567ms
+2023-08-11 13:59:40.310 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 46.4777ms
+2023-08-11 13:59:40.414 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 13:59:40.634 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 220.0090ms
+2023-08-11 14:00:17.867 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7135/Arquivo/processar-arquivo application/json 24
+2023-08-11 14:00:17.894 -03:00 [INF] CORS policy execution successful.
+2023-08-11 14:00:17.910 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 14:00:17.981 -03:00 [INF] Route matched with {action = "ProcessarArquivo", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[MyApp.Application.CNAB.Response] ProcessarArquivo(MyApp.Application.CNAB.Request, System.Threading.CancellationToken) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 14:00:17.998 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api) in 4.0089ms
+2023-08-11 14:00:18.007 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 14:00:18.069 -03:00 [ERR] Unable to resolve service for type 'MediatR.IMediator' while attempting to activate 'MyApp.Api.Controllers.ArquivoController'.
+System.InvalidOperationException: Unable to resolve service for type 'MediatR.IMediator' while attempting to activate 'MyApp.Api.Controllers.ArquivoController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at MyApp.CrossCutting.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.CrossCutting\ExceptionHandlingMiddleware.cs:line 19
+2023-08-11 14:00:18.226 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7135/Arquivo/processar-arquivo application/json 24 - 500 - application/json 358.7246ms
+2023-08-11 14:01:10.826 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 14:01:10.855 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 14:01:10.863 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 14:01:10.865 -03:00 [INF] Hosting environment: Development
+2023-08-11 14:01:10.867 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 14:01:11.793 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 14:01:12.388 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 14:01:12.388 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 14:01:12.399 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 9.2679ms
+2023-08-11 14:01:12.400 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 612.7438ms
+2023-08-11 14:01:12.430 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 41.3199ms
+2023-08-11 14:01:12.594 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 14:01:12.772 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 178.2857ms
+2023-08-11 14:02:18.628 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7135/Arquivo/processar-arquivo application/json 24
+2023-08-11 14:02:18.652 -03:00 [INF] CORS policy execution successful.
+2023-08-11 14:02:18.666 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 14:02:18.719 -03:00 [INF] Route matched with {action = "ProcessarArquivo", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[MyApp.Application.CNAB.Response] ProcessarArquivo(MyApp.Application.CNAB.Request, System.Threading.CancellationToken) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 14:02:27.147 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api) in 8418.7421ms
+2023-08-11 14:02:27.161 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 14:09:34.101 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 14:09:34.135 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 14:09:34.144 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 14:09:34.146 -03:00 [INF] Hosting environment: Development
+2023-08-11 14:09:34.147 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 14:09:35.136 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 14:09:35.699 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 14:09:35.699 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 14:09:35.716 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 587.2437ms
+2023-08-11 14:09:35.716 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 11.2616ms
+2023-08-11 14:09:35.742 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 42.4678ms
+2023-08-11 14:09:35.841 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 14:09:36.022 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 181.9191ms
+2023-08-11 14:09:42.710 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7135/Arquivo/processar-arquivo application/json 24
+2023-08-11 14:09:42.724 -03:00 [INF] CORS policy execution successful.
+2023-08-11 14:09:42.737 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 14:09:42.784 -03:00 [INF] Route matched with {action = "ProcessarArquivo", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[MyApp.Application.CNAB.Response] ProcessarArquivo(MyApp.Application.CNAB.Request, System.Threading.CancellationToken) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 14:09:46.858 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api) in 4060.8585ms
+2023-08-11 14:09:46.876 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 14:10:06.527 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 14:10:06.696 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 14:10:06.725 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 14:10:06.730 -03:00 [INF] Hosting environment: Development
+2023-08-11 14:10:06.731 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 14:10:07.390 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 14:10:08.118 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 14:10:08.118 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 14:10:08.141 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 20.2516ms
+2023-08-11 14:10:08.143 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 763.6372ms
+2023-08-11 14:10:08.164 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 46.1569ms
+2023-08-11 14:10:08.267 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 14:10:08.470 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 203.4937ms
+2023-08-11 14:10:13.743 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7135/Arquivo/processar-arquivo application/json 24
+2023-08-11 14:10:13.757 -03:00 [INF] CORS policy execution successful.
+2023-08-11 14:10:13.769 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 14:10:13.817 -03:00 [INF] Route matched with {action = "ProcessarArquivo", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[MyApp.Application.CNAB.Response] ProcessarArquivo(MyApp.Application.CNAB.Request, System.Threading.CancellationToken) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 14:12:02.388 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 14:12:02.413 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 14:12:02.420 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 14:12:02.421 -03:00 [INF] Hosting environment: Development
+2023-08-11 14:12:02.422 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 14:12:02.994 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 14:12:03.588 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 14:12:03.588 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 14:12:03.609 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 19.6833ms
+2023-08-11 14:12:03.611 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 625.7393ms
+2023-08-11 14:12:03.630 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 41.7972ms
+2023-08-11 14:12:03.742 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 14:12:03.932 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 189.7168ms
+2023-08-11 14:12:19.710 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7135/Arquivo/processar-arquivo application/json 24
+2023-08-11 14:12:19.725 -03:00 [INF] CORS policy execution successful.
+2023-08-11 14:12:19.742 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.ProcessarArquivo (MyApp.Api)'
+2023-08-11 14:12:19.796 -03:00 [INF] Route matched with {action = "ProcessarArquivo", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[MyApp.Application.CNAB.Response] ProcessarArquivo(MyApp.Application.CNAB.Request, System.Threading.CancellationToken) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 15:06:08.281 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 15:06:08.317 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 15:06:08.326 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 15:06:08.329 -03:00 [INF] Hosting environment: Development
+2023-08-11 15:06:08.331 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 15:06:09.450 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 15:06:10.232 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 15:06:10.232 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 15:06:10.253 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 15.0894ms
+2023-08-11 15:06:10.255 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 817.3393ms
+2023-08-11 15:06:10.279 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 47.2946ms
+2023-08-11 15:06:10.442 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 15:06:10.686 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 243.4178ms
+2023-08-11 15:48:24.650 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 15:48:24.743 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 15:48:24.777 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 15:48:24.816 -03:00 [INF] Hosting environment: Development
+2023-08-11 15:48:24.888 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 15:48:25.743 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 15:48:26.437 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 15:48:26.437 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 15:48:26.452 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 13.9017ms
+2023-08-11 15:48:26.466 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 739.0991ms
+2023-08-11 15:48:26.485 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 48.1324ms
+2023-08-11 15:48:26.621 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 15:48:26.840 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 218.2269ms
+2023-08-11 15:49:20.123 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 15:49:20.149 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 26.3709ms
+2023-08-11 15:49:20.158 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 15:49:20.158 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 15:49:20.161 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 3.5188ms
+2023-08-11 15:49:20.172 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 14.5434ms
+2023-08-11 15:49:20.282 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 15:49:20.289 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 6.8490ms
+2023-08-11 15:50:00.032 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 15:50:00.062 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 15:50:00.069 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 15:50:00.070 -03:00 [INF] Hosting environment: Development
+2023-08-11 15:50:00.071 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 15:50:00.984 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 15:50:01.618 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 15:50:01.618 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 15:50:01.634 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 14.9480ms
+2023-08-11 15:50:01.634 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 652.9816ms
+2023-08-11 15:50:01.657 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 39.2767ms
+2023-08-11 15:50:01.762 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 15:50:01.955 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 192.3545ms
+2023-08-11 15:53:39.960 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 15:53:40.009 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 15:53:40.020 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 15:53:40.023 -03:00 [INF] Hosting environment: Development
+2023-08-11 15:53:40.024 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 15:53:40.786 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 15:53:41.371 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 592.3551ms
+2023-08-11 15:53:41.376 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 15:53:41.376 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 15:53:41.393 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 17.5711ms
+2023-08-11 15:53:41.411 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 35.2142ms
+2023-08-11 15:53:41.530 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 15:53:41.742 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 211.7586ms
+2023-08-11 15:53:48.049 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/Arquivo/tests/pdf?nome=yuyiu - -
+2023-08-11 15:53:48.072 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 15:53:48.137 -03:00 [INF] Route matched with {action = "PdfTeste", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PdfTeste(System.String) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 15:53:55.702 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api) in 7552.9645ms
+2023-08-11 15:53:55.719 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 15:54:51.713 -03:00 [ERR] One or more errors occurred. (Unable to load DLL 'libwkhtmltox' or one of its dependencies: Não foi possível encontrar o módulo especificado. (0x8007007E))
+System.AggregateException: One or more errors occurred. (Unable to load DLL 'libwkhtmltox' or one of its dependencies: Não foi possível encontrar o módulo especificado. (0x8007007E))
+ ---> System.DllNotFoundException: Unable to load DLL 'libwkhtmltox' or one of its dependencies: Não foi possível encontrar o módulo especificado. (0x8007007E)
+   at DinkToPdf.WkHtmlToXBindings.wkhtmltopdf_init(Int32 useGraphics)
+   at DinkToPdf.PdfTools.Load()
+   at DinkToPdf.BasicConverter.Convert(IDocument document)
+   at DinkToPdf.SynchronizedConverter.<>n__0(IDocument document)
+   at DinkToPdf.SynchronizedConverter.<>c__DisplayClass5_0.<Convert>b__0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+   --- End of inner exception stack trace ---
+   at DinkToPdf.SynchronizedConverter.Invoke[TResult](Func`1 delegate)
+   at DinkToPdf.SynchronizedConverter.Convert(IDocument document)
+   at MyApp.ReportService.Services.PdfService.GeneratePDF(PDF pdf) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Common\Services\PdfService.cs:line 132
+   at MyApp.Application.ReportTeste.ReportHandler.Handle(ReportRequest request, CancellationToken cancellationToken) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Application\ReportTeste\ReportHandler.cs:line 23
+   at MyApp.CrossCutting.PipelineBehavior.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.CrossCutting\PipelineBehavior\ValidationPipelineBehavior.cs:line 46
+   at MyApp.Api.Controllers.ArquivoController.PdfTeste(String nome) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\Controllers\ArquivoController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at MyApp.CrossCutting.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.CrossCutting\ExceptionHandlingMiddleware.cs:line 19
+2023-08-11 15:54:52.203 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/Arquivo/tests/pdf?nome=yuyiu - - - 500 - application/json 64153.9227ms
+2023-08-11 15:54:55.115 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/Arquivo/tests/pdf?nome=yuyiu - -
+2023-08-11 15:54:55.118 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 15:54:55.121 -03:00 [INF] Route matched with {action = "PdfTeste", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PdfTeste(System.String) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 15:55:33.929 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api) in 38804.6571ms
+2023-08-11 15:55:33.936 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 15:56:17.316 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 15:56:17.346 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 15:56:17.353 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 15:56:17.358 -03:00 [INF] Hosting environment: Development
+2023-08-11 15:56:17.361 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 15:56:18.010 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 15:56:18.585 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 15:56:18.585 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 15:56:18.606 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 601.1126ms
+2023-08-11 15:56:18.606 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 19.1863ms
+2023-08-11 15:56:18.627 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 42.3125ms
+2023-08-11 15:56:18.721 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 15:56:18.914 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 193.5374ms
+2023-08-11 15:56:25.906 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/Arquivo/tests/pdf?nome=gfdhgfdgf - -
+2023-08-11 15:56:25.925 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 15:56:25.980 -03:00 [INF] Route matched with {action = "PdfTeste", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PdfTeste(System.String) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 15:56:30.378 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api) in 4385.6408ms
+2023-08-11 15:56:30.389 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 15:56:30.421 -03:00 [ERR] One or more errors occurred. (Unable to load DLL 'libwkhtmltox' or one of its dependencies: Não foi possível encontrar o módulo especificado. (0x8007007E))
+System.AggregateException: One or more errors occurred. (Unable to load DLL 'libwkhtmltox' or one of its dependencies: Não foi possível encontrar o módulo especificado. (0x8007007E))
+ ---> System.DllNotFoundException: Unable to load DLL 'libwkhtmltox' or one of its dependencies: Não foi possível encontrar o módulo especificado. (0x8007007E)
+   at DinkToPdf.WkHtmlToXBindings.wkhtmltopdf_init(Int32 useGraphics)
+   at DinkToPdf.PdfTools.Load()
+   at DinkToPdf.BasicConverter.Convert(IDocument document)
+   at DinkToPdf.SynchronizedConverter.<>n__0(IDocument document)
+   at DinkToPdf.SynchronizedConverter.<>c__DisplayClass5_0.<Convert>b__0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+   --- End of inner exception stack trace ---
+   at DinkToPdf.SynchronizedConverter.Invoke[TResult](Func`1 delegate)
+   at DinkToPdf.SynchronizedConverter.Convert(IDocument document)
+   at MyApp.ReportService.Services.PdfService.GeneratePDF(PDF pdf) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Common\Services\PdfService.cs:line 132
+   at MyApp.Application.ReportTeste.ReportHandler.Handle(ReportRequest request, CancellationToken cancellationToken) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Application\ReportTeste\ReportHandler.cs:line 23
+   at MyApp.CrossCutting.PipelineBehavior.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.CrossCutting\PipelineBehavior\ValidationPipelineBehavior.cs:line 46
+   at MyApp.Api.Controllers.ArquivoController.PdfTeste(String nome) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\Controllers\ArquivoController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at MyApp.CrossCutting.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.CrossCutting\ExceptionHandlingMiddleware.cs:line 19
+2023-08-11 15:56:30.853 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/Arquivo/tests/pdf?nome=gfdhgfdgf - - - 500 - application/json 4947.8271ms
+2023-08-11 16:01:06.849 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 16:01:06.882 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 16:01:06.895 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 16:01:06.899 -03:00 [INF] Hosting environment: Development
+2023-08-11 16:01:06.902 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 16:01:07.925 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 16:01:08.541 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 16:01:08.541 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 16:01:08.552 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 9.3208ms
+2023-08-11 16:01:08.552 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 631.7425ms
+2023-08-11 16:01:08.586 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 45.0018ms
+2023-08-11 16:01:08.711 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 16:01:08.932 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 220.3528ms
+2023-08-11 16:01:12.327 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/Arquivo/tests/pdf - -
+2023-08-11 16:01:12.352 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 16:01:12.415 -03:00 [INF] Route matched with {action = "PdfTeste", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PdfTeste(System.String) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 16:01:12.478 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-08-11 16:01:12.518 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api) in 92.1917ms
+2023-08-11 16:01:12.526 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 16:01:12.528 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/Arquivo/tests/pdf - - - 400 - application/problem+json;+charset=utf-8 201.0309ms
+2023-08-11 16:01:41.408 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/Arquivo/tests/pdf - -
+2023-08-11 16:01:41.417 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 16:01:41.440 -03:00 [INF] Route matched with {action = "PdfTeste", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PdfTeste(System.String) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 16:01:41.458 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-08-11 16:01:41.466 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api) in 8.4198ms
+2023-08-11 16:01:41.472 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 16:01:41.476 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/Arquivo/tests/pdf - - - 400 - application/problem+json;+charset=utf-8 67.8841ms
+2023-08-11 16:01:44.349 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/Arquivo/tests/pdf?nome=sdfsdfsdfasdf - -
+2023-08-11 16:01:44.356 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 16:01:44.361 -03:00 [INF] Route matched with {action = "PdfTeste", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PdfTeste(System.String) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 16:01:47.805 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api) in 3437.6605ms
+2023-08-11 16:01:47.814 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 16:03:25.622 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 16:03:25.657 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 16:03:25.668 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 16:03:25.672 -03:00 [INF] Hosting environment: Development
+2023-08-11 16:03:25.674 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 16:03:28.862 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 16:03:29.881 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 16:03:29.882 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 16:03:29.899 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 15.0533ms
+2023-08-11 16:03:29.901 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 1053.3005ms
+2023-08-11 16:03:29.928 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 47.7654ms
+2023-08-11 16:03:30.047 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 16:03:30.229 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 182.0428ms
+2023-08-11 16:03:36.754 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/Arquivo/tests/pdf?nome=123132 - -
+2023-08-11 16:03:36.773 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 16:03:36.846 -03:00 [INF] Route matched with {action = "PdfTeste", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PdfTeste(System.String) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 16:03:39.818 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api) in 2963.432ms
+2023-08-11 16:03:39.831 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 16:16:41.031 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 16:16:41.066 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 16:16:41.076 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 16:16:41.081 -03:00 [INF] Hosting environment: Development
+2023-08-11 16:16:41.083 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 16:16:41.790 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 16:16:42.371 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 16:16:42.371 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 16:16:42.389 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 595.7905ms
+2023-08-11 16:16:42.389 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 18.0240ms
+2023-08-11 16:16:42.417 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 45.4926ms
+2023-08-11 16:16:42.528 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 16:16:42.718 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 189.7648ms
+2023-08-11 16:16:47.402 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/Arquivo/tests/pdf?nome=dasdsdfsdf - -
+2023-08-11 16:16:47.421 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 16:16:47.482 -03:00 [INF] Route matched with {action = "PdfTeste", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PdfTeste(System.String) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 16:16:52.420 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api) in 4923.6056ms
+2023-08-11 16:16:52.435 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 16:20:16.895 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 16:20:16.928 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 16:20:16.939 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 16:20:16.942 -03:00 [INF] Hosting environment: Development
+2023-08-11 16:20:16.944 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 16:20:17.689 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 16:20:18.289 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 604.1076ms
+2023-08-11 16:20:18.290 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 16:20:18.290 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 16:20:18.306 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 16.2073ms
+2023-08-11 16:20:18.324 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 34.5247ms
+2023-08-11 16:20:18.446 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 16:20:18.615 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 168.8527ms
+2023-08-11 16:20:25.768 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/Arquivo/tests/pdf?nome=asdfafdsfa - -
+2023-08-11 16:20:25.787 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 16:20:25.840 -03:00 [INF] Route matched with {action = "PdfTeste", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PdfTeste(System.String) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 16:20:35.458 -03:00 [INF] Executing FileContentResult, sending file with download name 'exemplo.pdf' ...
+2023-08-11 16:20:35.485 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api) in 9633.249ms
+2023-08-11 16:20:35.495 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 16:20:35.500 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/Arquivo/tests/pdf?nome=asdfafdsfa - - - 200 16729 application/pdf 9731.8935ms
+2023-08-11 16:21:10.781 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 16:21:10.812 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 16:21:10.822 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 16:21:10.825 -03:00 [INF] Hosting environment: Development
+2023-08-11 16:21:10.826 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 16:21:13.921 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 16:21:14.726 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 16:21:14.726 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 16:21:14.745 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 16.0696ms
+2023-08-11 16:21:14.745 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 832.2594ms
+2023-08-11 16:21:14.769 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 43.0413ms
+2023-08-11 16:21:14.908 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 16:21:15.205 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 296.1184ms
+2023-08-11 16:21:37.994 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/Arquivo/tests/pdf?nome=sdfgsdfgsdgf - -
+2023-08-11 16:21:38.016 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 16:21:38.070 -03:00 [INF] Route matched with {action = "PdfTeste", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PdfTeste(System.String) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 16:21:38.790 -03:00 [INF] Executing FileContentResult, sending file with download name 'exemplo.pdf' ...
+2023-08-11 16:21:38.808 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api) in 727.2842ms
+2023-08-11 16:21:38.817 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 16:21:38.819 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/Arquivo/tests/pdf?nome=sdfgsdfgsdgf - - - 200 16729 application/pdf 825.5726ms
+2023-08-11 16:22:39.825 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 16:22:39.864 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 16:22:39.872 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 16:22:39.877 -03:00 [INF] Hosting environment: Development
+2023-08-11 16:22:39.879 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 16:22:41.415 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 16:22:42.222 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 16:22:42.240 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 16:22:42.262 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 38.1084ms
+2023-08-11 16:22:42.264 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 860.6513ms
+2023-08-11 16:22:42.331 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 90.9926ms
+2023-08-11 16:22:42.460 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 16:22:42.670 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 212.0663ms
+2023-08-11 16:23:09.399 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 16:23:09.434 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 16:23:09.443 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 16:23:09.445 -03:00 [INF] Hosting environment: Development
+2023-08-11 16:23:09.448 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 16:23:11.284 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 16:23:12.040 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 767.1731ms
+2023-08-11 16:23:12.041 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 16:23:12.041 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 16:23:12.060 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 15.9543ms
+2023-08-11 16:23:12.079 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 37.4527ms
+2023-08-11 16:23:12.181 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 16:23:12.356 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 174.5402ms
+2023-08-11 16:26:50.031 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 16:26:50.061 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 16:26:50.069 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 16:26:50.074 -03:00 [INF] Hosting environment: Development
+2023-08-11 16:26:50.075 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 16:26:52.093 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 16:26:52.824 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 16:26:52.825 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 738.6596ms
+2023-08-11 16:26:52.826 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 16:26:52.869 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 43.8356ms
+2023-08-11 16:26:52.912 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 88.6540ms
+2023-08-11 16:26:53.021 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 16:26:53.226 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 204.8769ms
+2023-08-11 16:28:47.294 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 16:28:47.332 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 16:28:47.341 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 16:28:47.344 -03:00 [INF] Hosting environment: Development
+2023-08-11 16:28:47.345 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 16:28:50.526 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 16:28:51.801 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 16:28:51.801 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 16:28:51.824 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 19.4943ms
+2023-08-11 16:28:51.834 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 1321.9970ms
+2023-08-11 16:28:51.907 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 105.2839ms
+2023-08-11 16:28:52.074 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 16:28:52.391 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 316.6606ms
+2023-08-11 16:28:59.276 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/Arquivo/tests/pdf?Name=dfasdfasdfsfasd - -
+2023-08-11 16:28:59.297 -03:00 [INF] Executing endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 16:28:59.355 -03:00 [INF] Route matched with {action = "PdfTeste", controller = "Arquivo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PdfTeste(MyApp.Application.ReportTeste.ReportRequest, System.Threading.CancellationToken) on controller MyApp.Api.Controllers.ArquivoController (MyApp.Api).
+2023-08-11 16:29:00.385 -03:00 [INF] Executing FileContentResult, sending file with download name 'exemplo.pdf' ...
+2023-08-11 16:29:00.403 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api) in 1036.5798ms
+2023-08-11 16:29:00.411 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
+2023-08-11 16:29:00.417 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/Arquivo/tests/pdf?Name=dfasdfasdfsfasd - - - 200 16729 application/pdf 1140.4466ms

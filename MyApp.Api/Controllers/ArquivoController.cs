@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using MyApp.Application.CNAB;
+using MyApp.Application.ReportTeste;
 
 namespace MyApp.Api.Controllers
 {
@@ -33,7 +34,17 @@ namespace MyApp.Api.Controllers
         public  string GetHelthCheck(CancellationToken cancellationToken)
         {
             _logger.Information("TESTE LOG");
+
             return "OK";
+        }
+
+        [HttpGet("tests/pdf")]
+       public async Task<IActionResult> PdfTeste([FromQuery] ReportRequest request,
+            CancellationToken cancellationToken)
+        {
+            byte[] pdf = await _mediator.Send(request);
+
+            return File(pdf, "application/pdf", "exemplo.pdf");
         }
     }
 }

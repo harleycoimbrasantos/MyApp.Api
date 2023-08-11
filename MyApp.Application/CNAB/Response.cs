@@ -11,8 +11,6 @@
         public string? Store { get; set; }
         public decimal? Total { get; set; }
         public IEnumerable<MovementResponse>? Movements { get; set; }
-
-
     }
 
     public class MovementResponse

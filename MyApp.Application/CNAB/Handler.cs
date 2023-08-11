@@ -12,8 +12,6 @@ namespace MyApp.Application.CNAB
         private readonly ICustomerMovementRepository _customerMovementRepository;
         private readonly ITransactionTypeRepository _transactionTypeRepository;
 
-
-
         public Handler(IFileManagementService fileManagementService, ICustomerMovementService customerMovementService, ICustomerMovementRepository customerMovementRepository, ITransactionTypeRepository transactionTypeRepository)
         {
             _fileManagementService = fileManagementService;
@@ -24,7 +22,7 @@ namespace MyApp.Application.CNAB
 
         public async Task<Response> Handle(Request request, CancellationToken cancellationToken)
         {
-            byte[] data = 
+            byte[]? data = 
                 Convert.FromBase64String(request.Base64.Replace("data:text/plain;base64,", string.Empty));
 
             string filePath = 

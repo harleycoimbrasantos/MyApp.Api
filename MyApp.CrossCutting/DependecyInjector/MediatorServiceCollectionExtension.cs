@@ -9,12 +9,11 @@ namespace MyApp.CrossCutting.DependecyInjector
     {
         public static IServiceCollection AddMediator(this IServiceCollection services)
         {
-            return services
-                .AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationPipelineBehavior<,>))
-                .AddMediatR(config =>
-                    {
-                        config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
-                    });
+            
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(Application.Context).Assembly));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationPipelineBehavior<,>));
+
+            return services;
         }
     }
 }
