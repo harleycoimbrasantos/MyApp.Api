@@ -14,7 +14,7 @@ namespace MyApp.Application.ReportTeste
             _pdfService = pdfService;
         }
 
-        public  Task<byte[]> Handle(ReportRequest request, CancellationToken cancellationToken)
+        public Task<byte[]> Handle(ReportRequest request, CancellationToken cancellationToken)
         {
             PDF pdf =
                 PdfBuilder.Create(GenerateTestTemplate())
@@ -22,7 +22,6 @@ namespace MyApp.Application.ReportTeste
 
             return Task.FromResult(_pdfService.GeneratePDF(pdf));
         }
-
 
         private ITemplate GenerateTestTemplate()
         {

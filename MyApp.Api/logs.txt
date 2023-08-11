@@ -1251,3 +1251,16 @@ System.AggregateException: One or more errors occurred. (Unable to load DLL 'lib
 2023-08-11 16:29:00.403 -03:00 [INF] Executed action MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api) in 1036.5798ms
 2023-08-11 16:29:00.411 -03:00 [INF] Executed endpoint 'MyApp.Api.Controllers.ArquivoController.PdfTeste (MyApp.Api)'
 2023-08-11 16:29:00.417 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/Arquivo/tests/pdf?Name=dfasdfasdfsfasd - - - 200 16729 application/pdf 1140.4466ms
+2023-08-11 16:34:09.908 -03:00 [INF] Now listening on: https://localhost:7135
+2023-08-11 16:34:09.943 -03:00 [INF] Now listening on: http://localhost:5135
+2023-08-11 16:34:09.952 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-11 16:34:09.954 -03:00 [INF] Hosting environment: Development
+2023-08-11 16:34:09.955 -03:00 [INF] Content root path: C:\Users\cbyk-dev\source\repos\MyApp.Api\MyApp.Api\
+2023-08-11 16:34:11.816 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/index.html - -
+2023-08-11 16:34:12.786 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - -
+2023-08-11 16:34:12.786 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/_vs/browserLink - -
+2023-08-11 16:34:12.788 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/index.html - - - 200 - text/html;charset=utf-8 981.9723ms
+2023-08-11 16:34:12.815 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 29.3123ms
+2023-08-11 16:34:12.831 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 45.3559ms
+2023-08-11 16:34:12.950 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - -
+2023-08-11 16:34:13.139 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7135/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 189.7993ms
