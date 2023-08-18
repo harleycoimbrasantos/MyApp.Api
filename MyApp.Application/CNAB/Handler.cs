@@ -5,7 +5,8 @@ using MyApp.Services.Interfaces;
 
 namespace MyApp.Application.CNAB
 {
-    public class Handler : IRequestHandler<Request, Response>
+    public class Handler : IRequestHandler<Request, Response>,
+                           IRequestHandler<GetCustomerMovementAllRequest, GetCustomerMovementAllResponse>
     {
         private readonly IFileManagementService _fileManagementService;
         private readonly ICustomerMovementService _customerMovementService;
@@ -85,6 +86,12 @@ namespace MyApp.Application.CNAB
             }
 
             return new Response() { Success = false }; 
+        }
+
+        public Task<GetCustomerMovementAllResponse> Handle(GetCustomerMovementAllRequest request, CancellationToken cancellationToken)
+        {
+            return 
+                Task.FromResult(new GetCustomerMovementAllResponse() { CustomerMovements = _customerMovementRepository.GetAll() });
         }
     }
 }

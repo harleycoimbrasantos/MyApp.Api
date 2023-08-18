@@ -77,8 +77,6 @@ namespace MyApp.CrossCutting
                     .ToDictionary(x => x.Key, x => x.Values);
             }
 
-
-
             return errors;
         }
     }

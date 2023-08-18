@@ -38,7 +38,7 @@ namespace MyApp.Api.Controllers
             return "OK";
         }
 
-        [HttpGet("tests/pdf")]
+       [HttpGet("tests/pdf")]
        public async Task<IActionResult> PdfTeste([FromQuery] ReportRequest request,
             CancellationToken cancellationToken)
         {
@@ -46,5 +46,12 @@ namespace MyApp.Api.Controllers
 
             return File(pdf, "application/pdf", "exemplo.pdf");
         }
+
+        [HttpGet("GetAll")]
+        public async Task<GetCustomerMovementAllResponse> GetAll(CancellationToken cancellationToken)
+        {
+            return await _mediator.Send(new GetCustomerMovementAllRequest() { }, cancellationToken);
+        }
+
     }
 }
